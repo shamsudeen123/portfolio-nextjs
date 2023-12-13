@@ -197,7 +197,10 @@ const Projects = () => {
                     </div>
                     <a
                       className="orido_tm_full_link zoom"
-                      href="img/portfolio/5.jpg"
+                      onClick={() => {
+                        setData(GS_MOB)
+                        setDetailsPopup(true)}
+                      }
                     />
                   </div>
                 </SwiperSlide>
