@@ -19,7 +19,7 @@ const Header = ({ dark }) => {
               <a href="#service">Service</a>
             </li> */}
             <li>
-              <a href="#portfolio">Portfolio</a>
+              <a href="#portfolio">Projects</a>
             </li>
             {/* <li>
               <a href="#blog">Blog</a>
