@@ -49,6 +49,16 @@ const DetailsPopup = ({ data, open, close }) => {
             </ul>
           </div>
         </div>
+        <div className="">
+        <h3>Deliverables</h3>
+            <ul style={{marginLeft: 20}}>
+              {data.deliverables?.map((item) => 
+              <li>
+                <span>{item}</span>
+              </li>
+              )}
+              </ul>
+              </div>
         {/* <div className="additional_images">
           <ul>
             <li>

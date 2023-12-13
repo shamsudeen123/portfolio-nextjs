@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { projectSliderProps } from "../sliderProps";
 import { dataImage } from "../utilits";
 import DetailsPopup from "./popup/DetailsPopup";
-import { AI_ATTENDANCE_SYSTEM, BTF, EBT, GOLD_STAR_PRODUCTS, GS_MOB, GS_WEB, HUNTER_FINANCE } from "../constants/project";
+import { AI_ATTENDANCE_SYSTEM, BENESYS, BTF, EBT, GOLD_STAR_PRODUCTS, GS_MOB, GS_WEB, HUNTER_FINANCE } from "../constants/project";
 
 const Projects = () => {
   useEffect(() => {
@@ -198,7 +198,7 @@ const Projects = () => {
                     <a
                       className="orido_tm_full_link zoom"
                       onClick={() => {
-                        setData(GS_MOB)
+                        setData(BENESYS)
                         setDetailsPopup(true)}
                       }
                     />
