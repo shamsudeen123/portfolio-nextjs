@@ -52,8 +52,8 @@ const DetailsPopup = ({ data, open, close }) => {
         <div className="">
         <h3>Deliverables</h3>
             <ul style={{marginLeft: 20}}>
-              {data.deliverables?.map((item) => 
-              <li>
+              {data.deliverables?.map((item, index) => 
+              <li key={index}>
                 <span>{item}</span>
               </li>
               )}

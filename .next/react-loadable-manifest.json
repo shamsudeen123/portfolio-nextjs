@@ -1,14 +1,30 @@
 {
-  "index.js -> ../src/components/Partners": {
-    "id": "index.js -> ../src/components/Partners",
+  "index-dark.js -> ../src/components/Partners": {
+    "id": 4739,
     "files": [
-      "static/chunks/src_components_Partners_js.js"
+      "static/chunks/514.4ee1d4c2e3ff158d.js",
+      "static/chunks/739.046732dcd27dc915.js"
+    ]
+  },
+  "index-dark.js -> ../src/components/Projects": {
+    "id": 7849,
+    "files": [
+      "static/chunks/514.4ee1d4c2e3ff158d.js",
+      "static/chunks/849.ce7efbc5102f9589.js"
+    ]
+  },
+  "index.js -> ../src/components/Partners": {
+    "id": 4739,
+    "files": [
+      "static/chunks/514.4ee1d4c2e3ff158d.js",
+      "static/chunks/739.046732dcd27dc915.js"
     ]
   },
   "index.js -> ../src/components/Projects": {
-    "id": "index.js -> ../src/components/Projects",
+    "id": 7849,
     "files": [
-      "static/chunks/src_components_Projects_js.js"
+      "static/chunks/514.4ee1d4c2e3ff158d.js",
+      "static/chunks/849.ce7efbc5102f9589.js"
     ]
   }
 }
