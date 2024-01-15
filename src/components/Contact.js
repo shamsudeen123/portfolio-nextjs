@@ -35,8 +35,8 @@ const Contact = () => {
                 <li>
                   <span className="name">Call:</span>
                   <p>
-                    <a className="line_effect" href="tel:+917025963669" target="_blank" rel="noopener noreferrer">
-                     +91 702-596-3669
+                    <a className="line_effect" href="tel:971551381851" target="_blank" rel="noopener noreferrer">
+                     971 55-138-1851
                     </a>
                   </p>
                 </li>
