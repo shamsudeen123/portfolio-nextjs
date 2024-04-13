@@ -36,7 +36,7 @@ const Contact = () => {
                   <span className="name">Call:</span>
                   <p>
                     <a className="line_effect" href="tel:971551381851" target="_blank" rel="noopener noreferrer">
-                     971 55-138-1851
+                     971 54-569-5979
                     </a>
                   </p>
                 </li>

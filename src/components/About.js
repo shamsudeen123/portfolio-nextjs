@@ -5,7 +5,7 @@ const About = () => {
         <div className="about_in">
           <div className="left">
             <div className="box">
-              <h3 className="year">3</h3>
+              <h3 className="year">5</h3>
               <span className="experience">Years of Experience</span>
               <h3 className="name">SAMSU</h3>
             </div>
@@ -21,7 +21,7 @@ const About = () => {
             </div>
             <div className="text">
               <p>
-                Software developer with 3 years of experience in corporate software applications.Expertise in React JS, Next JS, React Native, Node JS.
+                Software developer with 5 years of experience in corporate software applications.Expertise in React JS, Next JS, React Native, Node JS.
                 With a passion for crafting seamless digital experiences, I am dedicated to translating innovative ideas into efficient, user-friendly software solutions.
                 I am always excited to collaborate with fellow developers, designers, or tech enthusiasts. Whether its brainstorming innovative solutions or diving deep into tech discussions, I am here for it!
 
@@ -29,7 +29,7 @@ const About = () => {
             </div>
             <div className="short">
               <div className="orido_tm_boxed_button">
-                <a href="img/cv/Samsudeen_SM_Updated_CV.pdf" download>
+                <a href="img/cv/Samsudeen_Mohd_CV.pdf" download>
                   Download Resume{" "}
                   <img className="svg" src="img/svg/paper.svg" alt="" />
                 </a>
