@@ -8,11 +8,11 @@ const Home = ({ dark }) => {
               <h3>
                 Samsudeen SM <img className="svg" src="img/svg/hi.svg" alt="" />
               </h3>
-              <span className="job">Software Developer</span>
+              <span className="job">Senior Software Engineer</span>
             </div>
             <div className="text">
               <p>
-              Welcome to my portfolio, I am a software Developer based in UAE. I specialize in crafting cutting-edge solutions through code, transforming ideas into robust, user-centric software. With a passion for technology and a drive for excellence, I bring to life intuitive applications that solve real-world problems. Explore my portfolio to witness the seamless fusion of creativity and technical expertise, exemplifying my commitment to delivering high-quality, impactful software solutions. Join me on a journey through a collection of projects that showcase my dedication to building tomorrows technology today.
+              Welcome to my portfolio, I am a Senior software engineer based in UAE. I specialize in crafting cutting-edge solutions through code, transforming ideas into robust, user-centric software. With a passion for technology and a drive for excellence, I bring to life intuitive applications that solve real-world problems. Explore my portfolio to witness the seamless fusion of creativity and technical expertise, exemplifying my commitment to delivering high-quality, impactful software solutions. Join me on a journey through a collection of projects that showcase my dedication to building tomorrows technology today.
               </p>
             </div>
             <div className="buttons" style={{marhinTop: 20}}>

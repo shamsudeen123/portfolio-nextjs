@@ -21,12 +21,12 @@ const skills = [
 const experiences = [
   {
     company: "Apps Team Technologies",
-    designation: "Senior Software Developer",
+    designation: "Senior Software Engineer",
     time: "2022 - 2023",
   },
   {
     company: "Emproto Technologies",
-    designation: "Software Developer",
+    designation: "Software Engineer",
     time: "2021 - 2022",
   },
 ];
