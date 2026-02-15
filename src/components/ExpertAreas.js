@@ -15,10 +15,24 @@ const skills = [
   { name: "React Native", value: "", icon: "img/svg/reactnative.svg" },
   { name: "Node JS", value: "", icon: "img/svg/nodejs.svg" },
   { name: "Express JS", value: "", icon: "img/svg/express.svg" },
-  { name: "My SQL", value: "", icon: "img/svg/mysql.svg" }
+  { name: "My SQL", value: "", icon: "img/svg/mysql.svg" },
+  { name: "Mongo DB", value: "", icon: "img/svg/mysql.svg" },
+  { name: "Postgres", value: "", icon: "img/svg/postgre.png" }
+  { name: "AWS", value: "", icon: "img/svg/aws.png" },
+  { name: "Openshift", value: "", icon: "img/svg/openshift.png" },
 ];
 
 const experiences = [
+  {
+    company: "Emirates NBD",
+    designation: "Senior Software Engineer",
+    time: "2024 - 2026 : current",
+  },
+  {
+    company: "Pananroma Finance",
+    designation: "Full Stack Developer",
+    time: "2023 - 2024",
+  },
   {
     company: "Apps Team Technologies",
     designation: "Senior Software Engineer",
@@ -28,7 +42,7 @@ const experiences = [
     company: "Emproto Technologies",
     designation: "Software Engineer",
     time: "2021 - 2022",
-  },
+  }
 ];
 
 const educations = [

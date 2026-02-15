@@ -43,8 +43,8 @@ const Contact = () => {
                 <li>
                   <span className="name">Email:</span>
                   <p>
-                    <a className="line_effect" href="mailto:chanchuthayal@gmail.com" target="_blank" rel="noopener noreferrer">
-                      chanchuthayal@gmail.com
+                    <a className="line_effect" href="mailto:samsudeen.mohammedkunhi@gmail.com" target="_blank" rel="noopener noreferrer">
+                      samsudeen.mohammedkunhi@gmail.com
                     </a>
                   </p>
                 </li>
