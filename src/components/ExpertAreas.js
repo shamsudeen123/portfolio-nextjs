@@ -17,9 +17,9 @@ const skills = [
   { name: "Express JS", value: "", icon: "img/svg/express.svg" },
   { name: "My SQL", value: "", icon: "img/svg/mysql.svg" },
   { name: "Mongo DB", value: "", icon: "img/svg/mysql.svg" },
-  { name: "Postgres", value: "", icon: "img/svg/postgre.png" }
-  { name: "AWS", value: "", icon: "img/svg/aws.png" },
-  { name: "Openshift", value: "", icon: "img/svg/openshift.png" },
+  // { name: "Postgres", value: "", icon: "img/svg/postgre.png" }
+  // { name: "AWS", value: "", icon: "img/svg/aws.png" },
+  // { name: "Openshift", value: "", icon: "img/svg/openshift.png" },
 ];
 
 const experiences = [
