@@ -1,18 +1,21 @@
+import useScrollReveal from "../useScrollReveal";
+
 const Feedback = ({ dark }) => {
+  const revealRef = useScrollReveal();
   return (
-    <div className="orido_tm_section">
+    <div className="orido_tm_section" ref={revealRef}>
       <div className="orido_tm_testimonials">
         <div className="container">
-          <div className="orido_tm_main_title">
+          <div className="orido_tm_main_title" data-reveal="up">
             <h3>
               <span>
-                Award Winning and
+                Award Winning and 
                 <br />
-                Achiements
+                Achievements
               </span>
             </h3>
           </div>
-          <div className="testimonials_in">
+          <div className="testimonials_in" data-reveal="up" data-reveal-delay="1">
             <img src={`img/hero/welcome.jpg`} alt="" />
             <div className="info">
               <div className="text">

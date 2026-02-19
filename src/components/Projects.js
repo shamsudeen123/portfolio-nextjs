@@ -4,6 +4,18 @@ import { projectSliderProps } from "../sliderProps";
 import { dataImage } from "../utilits";
 import DetailsPopup from "./popup/DetailsPopup";
 import { AI_ATTENDANCE_SYSTEM, BENESYS, BTF, EBT, GOLD_STAR_PRODUCTS, GS_MOB, GS_WEB, HUNTER_FINANCE } from "../constants/project";
+import useScrollReveal from "../useScrollReveal";
+
+const projects = [
+  { data: GS_WEB, category: "Web App", title: "Growthscape", img: "img/service/growthscape.png" },
+  { data: GS_MOB, category: "Mobile App", title: "Growthscape", img: "img/service/growthscape.png" },
+  { data: HUNTER_FINANCE, category: "Web App", title: "Hunter Finance", img: "img/service/HF_logo.png" },
+  { data: GOLD_STAR_PRODUCTS, category: "Web App", title: "Gold Star Products", img: "img/service/GSP.jpg" },
+  { data: AI_ATTENDANCE_SYSTEM, category: "Product", title: "AI Attendance System", img: "img/service/logo.svg" },
+  { data: EBT, category: "Product", title: "Epic Bug Tracker", img: "img/service/EBT.svg" },
+  { data: BENESYS, category: "Web App", title: "Benesys", img: "img/service/benesys_logo.png" },
+  { data: BTF, category: "Web App", title: "Black Tulip Flowers", img: "img/service/BTF_logo.webp" },
+];
 
 const Projects = () => {
   useEffect(() => {
@@ -11,224 +23,44 @@ const Projects = () => {
   }, []);
   const [detailsPopup, setDetailsPopup] = useState(false);
   const [data, setData] = useState({});
-  
+  const revealRef = useScrollReveal();
+
   return (
     <Fragment>
       <DetailsPopup data={data} close={() => setDetailsPopup(false)} open={detailsPopup} />
-      <div className="orido_tm_section" id="portfolio">
+      <div className="orido_tm_section" id="portfolio" ref={revealRef}>
         <div className="orido_tm_portfolio">
           <div className="container">
-            <div className="orido_tm_main_title">
+            <div className="orido_tm_main_title" data-reveal="up">
               <h3>
-                <span>
-                  Look at my
-                  <br />
-                  recent projects
-                </span>
+                <span>Recent Projects</span>
               </h3>
             </div>
-            <div className="portfolio_list">
+            <div className="portfolio_list" data-reveal="up" data-reveal-delay="1">
               <Swiper
                 {...projectSliderProps}
                 className="owl-carousel gallery_zoom"
               >
-                <SwiperSlide>
-                  <div className="list_inner">
-                    <div className="image">
-                      <img src="img/thumbs/37-40.jpg" alt="" />
-                      <div
-                        className="main"
-                        data-img-url="img/service/growthscape.png"
+                {projects.map((project, i) => (
+                  <SwiperSlide key={i}>
+                    <div className="list_inner">
+                      <div className="project_image">
+                        <img src={project.img} alt={project.title} />
+                      </div>
+                      <div className="details">
+                        <span className="category">{project.category}</span>
+                        <h3 className="title">{project.title}</h3>
+                      </div>
+                      <a
+                        className="orido_tm_full_link c-pointer"
+                        onClick={() => {
+                          setData(project.data);
+                          setDetailsPopup(true);
+                        }}
                       />
                     </div>
-                    <div className="details">
-                      <span className="category">Web App</span>
-                      <h3 className="title">
-                        <span>Growthscape</span>
-                      </h3>
-                    </div>
-                    <a
-                      className="orido_tm_full_link popup-youtube"
-                      onClick={() => {
-                        setData(GS_WEB)
-                        setDetailsPopup(true)}
-                      }
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="list_inner">
-                    <div className="image">
-                      <img src="img/thumbs/37-40.jpg" alt="" />
-                      <div
-                        className="main"
-                        data-img-url="img/service/growthscape.png"
-                      />
-                    </div>
-                    <div className="details">
-                      <span className="category">Mobile App</span>
-                      <h3 className="title">
-                        <span>Growthscape</span>
-                      </h3>
-                    </div>
-                    <a
-                      className="orido_tm_full_link popup-youtube"
-                      onClick={() => {
-                        setData(GS_MOB)
-                        setDetailsPopup(true)}
-                      }
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="list_inner">
-                    <div className="">
-                      {/* <img src="img/thumbs/37-40.jpg" alt="" /> */}
-                      <img
-                        // className="main"
-                        src="img/service/HF_logo.png"
-                        style={{objectFit: "contain", height: 360, borderRadius: 12}}
-                      />
-                    </div>
-                    <div className="details">
-                      <span className="category">Web App</span>
-                      <h3 className="title">
-                        <span>Hunter Finance</span>
-                      </h3>
-                    </div>
-                    <a
-                      className="orido_tm_full_link popup-vimeo"
-                      onClick={() => {
-                        setData(HUNTER_FINANCE)
-                        setDetailsPopup(true)}
-                      }
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="list_inner">
-                    <div className="" style={{objectFit: "fill"}}>
-                      {/* <img src="img/thumbs/37-40.jpg" alt="" /> */}
-                      <img
-                        className="main"
-                        src="img/service/GSP.jpg"
-                        style={{objectFit: "fill", height: 360, borderRadius: 12}}
-                      />
-                    </div>
-                    <div className="details">
-                      <span className="category">Web App</span>
-                      <h3 className="title">
-                        <span>Gold Star Products</span>
-                      </h3>
-                    </div>
-                    <a
-                      className="orido_tm_full_link soundcloude_link mfp-iframe audio"
-                      onClick={() => {
-                        setData(GOLD_STAR_PRODUCTS)
-                        setDetailsPopup(true)}
-                    }
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="list_inner">
-                    <div className="">
-                    {/* <img src="img/thumbs/37-40.jpg" alt="" /> */}
-                      <img
-                        className="main"
-                        src="img/service/logo.svg"
-                        style={{objectFit: "fill", height: 360, borderRadius: 12}}
-                      />
-                    </div>
-                    <div className="details">
-                      <span className="category">Product</span>
-                      <h3 className="title">
-                        <span>AI Attendance System</span>
-                      </h3>
-                    </div>
-                    <a
-                      className="orido_tm_full_link details_link c-pointer"
-                      onClick={() => {
-                        setData(AI_ATTENDANCE_SYSTEM)
-                        setDetailsPopup(true)}
-                    }
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="list_inner">
-                    <div className="image">
-                      <img src="img/thumbs/37-40.jpg" alt="" />
-                      <div
-                        className="main"
-                        data-img-url="img/service/EBT.svg"
-                      />
-                    </div>
-                    <div className="details">
-                      <span className="category">Product</span>
-                      <h3 className="title">
-                        <span>Epic Bug Tracker</span>
-                      </h3>
-                    </div>
-                    <a
-                      className="orido_tm_full_link zoom"
-                      onClick={() => {
-                        setData(EBT)
-                        setDetailsPopup(true)}
-                    }
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="list_inner">
-                    <div className="">
-                      {/* <img src="img/service/benesys_logo.png" alt="" /> */}
-                      <img
-                        className="main"
-                        src="img/service/benesys_logo.png"
-                        style={{objectFit: "fill", height: 360, borderRadius: 12}}
-                      />
-                    </div>
-                    <div className="details">
-                      <span className="category">Web App</span>
-                      <h3 className="title">
-                        <span>Benesys</span>
-                      </h3>
-                    </div>
-                    <a
-                      className="orido_tm_full_link zoom"
-                      onClick={() => {
-                        setData(BENESYS)
-                        setDetailsPopup(true)}
-                      }
-                    />
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div className="list_inner">
-                    <div className="">
-                      {/* <img src="img/service/benesys_logo.png" alt="" /> */}
-                      <img
-                        className="main"
-                        src="img/service/BTF_logo.webp"
-                        style={{objectFit: "fill", height: 360, borderRadius: 12}}
-                      />
-                    </div>
-                    <div className="details">
-                      <span className="category">Web App</span>
-                      <h3 className="title">
-                        <span>Black Tulip Flowers</span>
-                      </h3>
-                    </div>
-                    <a
-                      className="orido_tm_full_link zoom"
-                      onClick={() => {
-                        setData(BTF)
-                        setDetailsPopup(true)}
-                    }
-                    />
-                  </div>
-                </SwiperSlide>
+                  </SwiperSlide>
+                ))}
               </Swiper>
               <a className="prev_button" href="#">
                 <img className="svg" src="img/svg/prev.svg" alt="" />

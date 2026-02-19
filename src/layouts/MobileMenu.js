@@ -7,8 +7,12 @@ const MobileMenu = () => {
       <div className="mobile_menu_inner">
         <div className="mobile_in">
           <div className="logo">
-            <a href="#">
-              <img src="img/logo/logo.png" alt="" />
+            <a href="#home" className="logo_link">
+              <span className="logo_monogram">SM</span>
+              <span className="logo_text">
+                <span className="logo_name">Samsudeen</span>
+                <span className="logo_role">Software Engineer</span>
+              </span>
             </a>
           </div>
           <div className="trigger" onClick={() => setToggle(!toggle)}>

@@ -1,9 +1,12 @@
+import useScrollReveal from "../useScrollReveal";
+
 const Contact = () => {
+  const revealRef = useScrollReveal();
   return (
-    <div className="orido_tm_section" id="contact">
+    <div className="orido_tm_section" id="contact" ref={revealRef}>
       <div className="orido_tm_contact">
         <div className="container">
-          <div className="infobox">
+          <div className="infobox" data-reveal="up">
             <div className="video_button">
               {/* <a
                 className="popup-youtube"
@@ -29,7 +32,7 @@ const Contact = () => {
               </a>
             </div>
           </div>
-          <div className="connect">
+          <div className="connect" data-reveal="up" data-reveal-delay="1">
             <div className="left">
               <ul>
                 <li>

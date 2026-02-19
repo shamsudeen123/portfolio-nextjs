@@ -1,40 +1,67 @@
+import useScrollReveal from "../useScrollReveal";
+
 const About = () => {
+  const revealRef = useScrollReveal();
   return (
-    <div className="orido_tm_section" id="about">
+    <div className="orido_tm_section" id="about" ref={revealRef}>
       <div className="orido_tm_about">
-        <div className="about_in">
-          <div className="left">
-            <div className="box">
-              <h3 className="year">7</h3>
-              <span className="experience">Years of Experience</span>
-              <h3 className="name">SAMSU</h3>
-            </div>
-          </div>
-          <div className="right">
-            <span className="element">
-              <img className="svg" src="img/svg/element.svg" alt="" />
-            </span>
+        <div className="container">
+          <div className="about_header" data-reveal="up">
             <div className="orido_tm_main_title">
               <h3>
                 <span>About Me</span>
               </h3>
             </div>
-            <div className="text">
-              <p>
-                Senior Software Engineer with 7 years of experience in corporate software applications.Expertise in React JS, Next JS, React Native, Node JS.
-                With a passion for crafting seamless digital experiences, I am dedicated to translating innovative ideas into efficient, user-friendly software solutions.
-                I am always excited to collaborate with fellow developers, designers, or tech enthusiasts. Whether its brainstorming innovative solutions or diving deep into tech discussions, I am here for it!
-
+          </div>
+          <div className="about_in">
+            <div className="about_text_col">
+              <p className="about_lead" data-reveal="left" data-reveal-delay="1">
+                Senior Software Engineer with <strong>7 years</strong> of experience building corporate software applications across web and mobile platforms.
               </p>
-            </div>
-            <div className="short">
-              <div className="orido_tm_boxed_button">
-                <a href="img/cv/SAMSUDEEN_SM_SR_SOFTWARE_ENGINEER.pdf" download>
-                  Download Resume{" "}
-                  <img className="svg" src="img/svg/paper.svg" alt="" />
-                </a>
+              <p className="about_body" data-reveal="left" data-reveal-delay="2">
+                Expertise in React JS, Next JS, React Native, and Node JS. With a passion for crafting seamless digital experiences, I am dedicated to translating innovative ideas into efficient, user-friendly software solutions.
+              </p>
+              <p className="about_body" data-reveal="left" data-reveal-delay="3">
+                I am always excited to collaborate with fellow developers, designers, or tech enthusiasts. Whether it's brainstorming innovative solutions or diving deep into tech discussions, I am here for it!
+              </p>
+              <div className="about_cta" data-reveal="up" data-reveal-delay="4">
+                <div className="orido_tm_boxed_button">
+                  <a href="img/cv/SAMSUDEEN_SM_SR_SOFTWARE_ENGINEER.pdf" download>
+                    Download Resume{" "}
+                    <img className="svg" src="img/svg/paper.svg" alt="" />
+                  </a>
+                </div>
               </div>
-              {/* <img src="img/signature.png" alt="" /> */}
+            </div>
+            <div className="about_stats_col">
+              <div className="about_stat_card" data-reveal="zoom" data-reveal-delay="1">
+                <div className="stat_icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <h4 className="stat_number">7+</h4>
+                <span className="stat_label">Years Experience</span>
+              </div>
+              <div className="about_stat_card" data-reveal="zoom" data-reveal-delay="2">
+                <div className="stat_icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <h4 className="stat_number">20+</h4>
+                <span className="stat_label">Projects Delivered</span>
+              </div>
+              <div className="about_stat_card" data-reveal="zoom" data-reveal-delay="3">
+                <div className="stat_icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h4 className="stat_number">4</h4>
+                <span className="stat_label">Companies</span>
+              </div>
+              <div className="about_stat_card" data-reveal="zoom" data-reveal-delay="4">
+                <div className="stat_icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <h4 className="stat_number">6+</h4>
+                <span className="stat_label">Frameworks</span>
+              </div>
             </div>
           </div>
         </div>

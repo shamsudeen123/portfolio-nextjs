@@ -1,12 +1,41 @@
 import { Fragment, useEffect, useState } from "react";
 import { filter_hashtag } from "../utilits";
 import Counter from "./Counter";
+import useScrollReveal from "../useScrollReveal";
 
 const counts = [
-  { name: "Framework Used", value: 6 },
-  { name: "Packages Used", value: 40 },
-  { name: "Corporate Projects", value: 7 },
-  { name: "Own Projects", value: 4 },
+  {
+    name: "Frameworks",
+    value: 6,
+    suffix: "+",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+    ),
+  },
+  {
+    name: "Packages Used",
+    value: 40,
+    suffix: "+",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+    ),
+  },
+  {
+    name: "Corporate Projects",
+    value: 7,
+    suffix: "",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+    ),
+  },
+  {
+    name: "Own Projects",
+    value: 4,
+    suffix: "",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    ),
+  },
 ];
 
 const skills = [
@@ -17,7 +46,7 @@ const skills = [
   { name: "Express JS", value: "", icon: "img/svg/express.svg" },
   { name: "My SQL", value: "", icon: "img/svg/mysql.svg" },
   { name: "Mongo DB", value: "", icon: "img/svg/mysql.svg" },
-  { name: "Postgres", value: "", icon: "img/svg/postgre.png" }
+  { name: "Postgres", value: "", icon: "img/svg/postgre.png" },
   { name: "AWS", value: "", icon: "img/svg/aws.png" },
   { name: "Openshift", value: "", icon: "img/svg/openshift.png" },
 ];
@@ -63,7 +92,7 @@ const educations = [
   },
   {
     institution: "KS Abdullah EMS",
-    certificate: "SSC",
+    certificate: "10th",
     time: "2002 - 2014",
   },
 ];
@@ -71,6 +100,8 @@ const educations = [
 const ExpertAreas = () => {
   const [activeTab, setActiveTab] = useState(1);
   const activeContentTab = (value) => (activeTab == value ? "current" : "");
+  const expertRef = useScrollReveal();
+  const counterRef = useScrollReveal();
 
   useEffect(() => {
     filter_hashtag();
@@ -78,12 +109,12 @@ const ExpertAreas = () => {
 
   return (
     <Fragment>
-      <div className="orido_tm_section">
+      <div className="orido_tm_section" ref={expertRef}>
         <div className="orido_tm_informations">
           <div className="container">
             <div className="informations_inner">
               <div className="left">
-                <div className="orido_tm_main_title">
+                <div className="orido_tm_main_title" data-reveal="left">
                   <h3>
                     <span>
                       My expert
@@ -92,7 +123,7 @@ const ExpertAreas = () => {
                     </span>
                   </h3>
                 </div>
-                <div className="text">
+                <div className="text" data-reveal="left" data-reveal-delay="1">
                   <p>
                   With a deep understanding of React.js, I specialize in crafting dynamic and interactive user interfaces. Proficient in leveraging Reacts component-based architecture and state management for seamless front-end development.
                   </p>
@@ -109,7 +140,7 @@ const ExpertAreas = () => {
                   </a>
                 </div> */}
               </div>
-              <div className="right">
+              <div className="right" data-reveal="right" data-reveal-delay="2">
                 <div className="filter">
                   <ul>
                     <li>
@@ -162,7 +193,7 @@ const ExpertAreas = () => {
                     <div className="skillbox">
                       <ul>
                         {skills.map((skill, i) => (
-                          <li key={i}>
+                          <li key={i} className="skill_animate" style={{ animationDelay: `${i * 0.06}s` }}>
                             <div className="list_inner">
                               <span className="icon">
                                 <span className="in">
@@ -236,16 +267,18 @@ const ExpertAreas = () => {
       </div>
       {/* /INFORMATIONS */}
       {/* COUNTER */}
-      <div className="orido_tm_section">
+      <div className="orido_tm_section" ref={counterRef}>
         <div className="orido_tm_counter">
           <div className="container">
             <div className="counter_list">
               <ul>
                 {counts.map((count, i) => (
-                  <li key={i}>
+                  <li key={i} data-reveal="up" data-reveal-delay={`${i + 1}`}>
                     <div className="list_inner">
+                      <div className="counter_icon">{count.icon}</div>
                       <h3>
                         <Counter end={count.value} />
+                        {count.suffix && <span className="counter_suffix">{count.suffix}</span>}
                       </h3>
                       <span className="title">{count.name}</span>
                     </div>

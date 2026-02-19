@@ -1,12 +1,12 @@
 {
-  "index.js -> ../src/components/Partners": {
-    "id": "index.js -> ../src/components/Partners",
+  "pages/index.js -> ../src/components/Partners": {
+    "id": "pages/index.js -> ../src/components/Partners",
     "files": [
       "static/chunks/src_components_Partners_js.js"
     ]
   },
-  "index.js -> ../src/components/Projects": {
-    "id": "index.js -> ../src/components/Projects",
+  "pages/index.js -> ../src/components/Projects": {
+    "id": "pages/index.js -> ../src/components/Projects",
     "files": [
       "static/chunks/src_components_Projects_js.js"
     ]
