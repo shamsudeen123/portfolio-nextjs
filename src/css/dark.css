@@ -177,6 +177,7 @@ body.dark .orido_tm_modalbox .metabox a,
 body.dark .orido_tm_modalbox .metabox span { color: #64748b; }
 
 /* Progress Bar */
-body.dark .progressbar { background-color: #1e293b; border-color: #334155; }
-body.dark .progressbar .text { color: #e2e8f0; }
-body.dark .progressbar .line { background: #2563eb; }
+body.dark .progressbar .progress_arrow { color: #60a5fa; }
+body.dark .progressbar:hover .progress_arrow { color: #3b82f6; }
+body.dark .progressbar .progress_ring_bg { stroke: #334155; }
+body.dark .progressbar .progress_ring_fill { stroke: #2563eb; }

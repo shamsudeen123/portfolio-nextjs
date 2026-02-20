@@ -22,7 +22,7 @@ const About = () => {
                 Expertise in React JS, Next JS, React Native, and Node JS. With a passion for crafting seamless digital experiences, I am dedicated to translating innovative ideas into efficient, user-friendly software solutions.
               </p>
               <p className="about_body" data-reveal="left" data-reveal-delay="3">
-                I am always excited to collaborate with fellow developers, designers, or tech enthusiasts. Whether it's brainstorming innovative solutions or diving deep into tech discussions, I am here for it!
+                I am always excited to collaborate with fellow developers, designers, or tech enthusiasts. Whether it&apos;s brainstorming innovative solutions or diving deep into tech discussions, I am here for it!
               </p>
               <div className="about_cta" data-reveal="up" data-reveal-delay="4">
                 <div className="orido_tm_boxed_button">

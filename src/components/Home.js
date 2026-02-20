@@ -9,7 +9,7 @@ const Home = () => {
           <div className="hero_content">
             <span className="hero_tagline" data-reveal="down">Senior Software Engineer</span>
             <h1 className="hero_title" data-reveal="up" data-reveal-delay="1">
-              Hi, I'm <span className="name_highlight">Samsudeen SM</span>
+              Hi, I&apos;m <span className="name_highlight">Samsudeen SM</span>
               <img className="svg wave_icon" src="img/svg/hi.svg" alt="" />
             </h1>
             <p className="hero_description" data-reveal="up" data-reveal-delay="2">

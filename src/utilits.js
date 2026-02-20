@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom";
 const preloader_ = () => {
   let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
     navigator.userAgent
@@ -30,10 +29,10 @@ export const customCursor = () => {
     t = document.querySelector(".cursor-outer");
 
   function mouseEvent(element) {
-    ReactDOM.findDOMNode(element).addEventListener("mouseenter", function () {
+    element.addEventListener("mouseenter", function () {
       e.classList.add("cursor-hover"), t.classList.add("cursor-hover");
     });
-    ReactDOM.findDOMNode(element).addEventListener("mouseleave", function () {
+    element.addEventListener("mouseleave", function () {
       e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover");
     });
   }
@@ -86,7 +85,7 @@ export const aTagClick = () => {
   const aTag = document.querySelectorAll("[href='#']");
   for (let i = 0; i < aTag.length; i++) {
     const a = aTag[i];
-    ReactDOM.findDOMNode(a).addEventListener("click", (e) => {
+    a.addEventListener("click", (e) => {
       e.preventDefault();
     });
   }
@@ -209,15 +208,18 @@ export const stickyNav = () => {
 
 export const scrollTop = () => {
   var bar = document.querySelector(".progressbar");
-  var line = document.querySelector(".progressbar .line");
+  var ring = document.querySelector(".progressbar .progress_ring_fill");
   var documentHeight = document.documentElement.scrollHeight;
   var windowHeight = window.innerHeight;
   var winScroll = window.scrollY;
-  var value = (winScroll / (documentHeight - windowHeight)) * 100;
-  var position = value;
+  var value = winScroll / (documentHeight - windowHeight);
+  // SVG circle circumference: 2 * PI * r (r=16)
+  var circumference = 2 * Math.PI * 16;
   if (winScroll > 100) {
     bar.classList.add("animate");
-    line.style.height = position + "%";
+    if (ring) {
+      ring.style.strokeDashoffset = circumference * (1 - value);
+    }
   } else {
     bar.classList.remove("animate");
   }
